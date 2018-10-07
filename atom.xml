@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>caicai</title>
+  
+  <subtitle>长路漫漫，唯py作伴。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-10-07T08:12:29.378Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>菜菜</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>突破算法第11天-红黑树</title>
+    <link href="http://yoursite.com/2017/10/30/python%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2017/10/30/python的坑/</id>
+    <published>2017-10-30T14:35:37.000Z</published>
+    <updated>2018-10-07T08:12:29.378Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong> 突破算法第11天-红黑树：</strong><br>红黑树<br><a id="more"></a><br>正文……</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt; 突破算法第11天-红黑树：&lt;/strong&gt;&lt;br&gt;红黑树&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python推荐书籍</title>
+    <link href="http://yoursite.com/2017/10/30/Python%E9%98%85%E8%AF%BB/"/>
+    <id>http://yoursite.com/2017/10/30/Python阅读/</id>
+    <published>2017-10-30T14:35:37.000Z</published>
+    <updated>2018-10-07T07:56:18.306Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong> python推荐书籍：</strong> <excerpt in="" index="" |="" 首页摘要=""><br>python成长之路的一些书籍，从易到难。<br><a id="more"></a></excerpt></p><p><the rest="" of="" contents="" |="" 余下全文=""></the></p><h2 id="Python参考书籍"><a href="#Python参考书籍" class="headerlink" title="Python参考书籍"></a>Python参考书籍</h2><h3 id="入门读物"><a href="#入门读物" class="headerlink" title="入门读物"></a>入门读物</h3><ol><li>《Python基础教程》（<em>Beginning Python From Novice to Professional</em>）</li><li>《Python学习手册》（<em>Learning Python</em>）</li><li>《Python编程》（<em>Programming Python</em>）</li><li>《Python Cookbook》</li><li>《Python程序设计》（<em>Python Programming: An Introduction to Computer Science</em>）</li><li>《Modern Python Cookbook》</li></ol><h3 id="进阶读物"><a href="#进阶读物" class="headerlink" title="进阶读物"></a>进阶读物</h3><ol><li>《Python核心编程》（<em>Core Python Applications Programming</em>）</li><li>《流畅的Python》（<em>Fluent Python</em>）</li><li>《Effective Python：编写高质量Python代码的59个有效方法》（<em>Effective Python 59 Specific Ways to Write Better Python</em>）</li><li>《Python设计模式》（<em>Learning Python Design Patterns</em>）</li><li>《Python高级编程》（<em>Expert Python Programming</em>）</li><li>《Python性能分析与优化》（<em>Mastering Python High Performance</em>）</li></ol><h3 id="Web框架"><a href="#Web框架" class="headerlink" title="Web框架"></a>Web框架</h3><ol><li>《Django基础教程》（<em>Tango with Django</em>）</li><li>《轻量级Django》（<em>Lightweight Django</em>）</li><li>《Python Web开发：测试驱动方法》（<em>Test-Driven Development with Python</em>）</li><li>《Web Development with Django Cookbook》</li><li>《Test-Driven Development with Django》</li><li>《Django Project Blueprints 》</li><li>《Flask Web开发：基于Python的Web应用开发实战》（<em>Flask Web Development: Developing Web Applications with Python</em>）</li><li>《深入理解Flask》（<em>Mastering Flask</em>）</li></ol><h3 id="爬虫开发"><a href="#爬虫开发" class="headerlink" title="爬虫开发"></a>爬虫开发</h3><ol><li>《用Python写网络爬虫》（<em>Web Scraping with Python</em>）</li><li>《精通Python爬虫框架Scrapy》（<em>Learning Scrapy</em>）</li><li>《Python网络数据采集》（<em>Web Scraping with Python</em>）</li><li>《Python爬虫开发与项目实战》</li><li>《Python 3网络爬虫开发实战》</li></ol><h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><ol><li>《利用Python进行数据分析》（<em>Python for Data Analysis</em>）</li><li>《Python数据科学手册》（<em>Python Data Science Handbook</em>）</li><li>《Python金融大数据分析》（<em>Python for Finance</em>）</li><li>《Python数据可视化编程实战》（<em>Python Data Visualization Cookbook</em>）</li><li>《Python数据处理》（<em>Data Wrangling with Python</em>）</li></ol><h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><ol><li>《Python机器学习基础教程》（<em>Introduction to Machine Learning with Python</em>）</li><li>《Python机器学习实践指南》（<em>Python Machine Learning Blueprints</em>）</li><li>《Python Machine Learning Case Studies》</li><li>《Python机器学习实践：测试驱动的开发方法》（<em>Thoughtful Machine Learning with Python A Test Driven Approach</em>）</li><li>《Python机器学习经典实例》（<em>Python Machine Learning Cookbook</em>）</li><li>《TensorFlow：实战Google深度学习框架》</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt; python推荐书籍：&lt;/strong&gt; &lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;python成长之路的一些书籍，从易到难。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="algorithm" scheme="http://yoursite.com/categories/algorithm/"/>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+</feed>
