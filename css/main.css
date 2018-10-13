@@ -1829,6 +1829,9 @@ pre .javascript .function {
   border: 1px solid #eee;
   opacity: 1;
 }
+.site-author-image {
+  border-radius: 100%;
+}
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -1911,7 +1914,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff9c;
+  background: #94aa08;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2541,7 +2544,6 @@ pre .javascript .function {
   overflow: hidden;
 }
 ul.breadcrumb {
-  list-style: none;
   margin: 1em 0;
   padding: 0 2em;
   text-align: center;
@@ -3013,4 +3015,7 @@ ul.breadcrumb li+li:last-child {
   .post-body {
     text-align: justify;
   }
+}
+.posts-expand .post-body ul li {
+  list-style: disc;
 }
