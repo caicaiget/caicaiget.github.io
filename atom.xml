@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caicaiget.github.io/"/>
-  <updated>2018-10-13T06:49:51.523Z</updated>
+  <updated>2018-10-15T13:48:36.425Z</updated>
   <id>https://caicaiget.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://caicaiget.github.io/post/2f57a694.html"/>
+    <id>https://caicaiget.github.io/post/2f57a694.html</id>
+    <published>2018-10-15T13:28:15.000Z</published>
+    <updated>2018-10-15T13:48:36.425Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;正则不管在哪里都是吃香的存在&lt;/p&gt;
+&lt;p&gt;小结正则命令&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="正则表达式" scheme="https://caicaiget.github.io/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+    
+      <category term="正则表达式" scheme="https://caicaiget.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL小结</title>
+    <link href="https://caicaiget.github.io/post/434c8e80.html"/>
+    <id>https://caicaiget.github.io/post/434c8e80.html</id>
+    <published>2018-10-15T10:49:25.000Z</published>
+    <updated>2018-10-15T13:17:59.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过数据库可以实现数据的持久化&lt;/p&gt;
+&lt;p&gt;这里总结一下常用语法&lt;/p&gt;
+&lt;p&gt;MYSQL小结&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="MYSQL" scheme="https://caicaiget.github.io/categories/MYSQL/"/>
+    
+    
+      <category term="MYSQL" scheme="https://caicaiget.github.io/tags/MYSQL/"/>
+    
+  </entry>
   
   <entry>
     <title>约瑟夫环</title>
