@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caicaiget.github.io/"/>
-  <updated>2018-10-15T13:49:54.680Z</updated>
+  <updated>2018-10-16T08:53:59.337Z</updated>
   <id>https://caicaiget.github.io/</id>
   
   <author>
@@ -17,9 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>linux进阶</title>
+    <link href="https://caicaiget.github.io/post/2018-10-16-linux%E8%BF%9B%E9%98%B6.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-16-linux进阶.html</id>
+    <published>2018-10-16T14:35:37.000Z</published>
+    <updated>2018-10-16T08:53:59.337Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;linux成长之路，共勉。&lt;br&gt;
+这篇文章中讲了操作系统的发展史，吃水勿忘挖井人。&lt;br&gt;
+linux一些进阶命令与使用也有涵盖。&lt;br&gt;
+望多多交流。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://caicaiget.github.io/categories/linux/"/>
+    
+    
+      <category term="linux进阶" scheme="https://caicaiget.github.io/tags/linux%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql进阶</title>
+    <link href="https://caicaiget.github.io/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-16-mysql进阶.html</id>
+    <published>2018-10-16T12:10:37.000Z</published>
+    <updated>2018-10-16T12:56:00.807Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;mysql的进阶知识，加油！&lt;/p&gt;
+&lt;p&gt;从删库到跑路？。。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="https://caicaiget.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql进阶" scheme="https://caicaiget.github.io/tags/mysql%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>正则表达式</title>
-    <link href="https://caicaiget.github.io/post/2f57a694.html"/>
-    <id>https://caicaiget.github.io/post/2f57a694.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-15-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-15-正则表达式.html</id>
     <published>2018-10-15T13:28:15.000Z</published>
     <updated>2018-10-15T13:49:54.680Z</updated>
     
@@ -39,10 +83,10 @@
   
   <entry>
     <title>MYSQL小结</title>
-    <link href="https://caicaiget.github.io/post/434c8e80.html"/>
-    <id>https://caicaiget.github.io/post/434c8e80.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-15-mysql%E5%B0%8F%E7%BB%93.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-15-mysql小结.html</id>
     <published>2018-10-15T10:49:25.000Z</published>
-    <updated>2018-10-15T13:49:54.678Z</updated>
+    <updated>2018-10-16T11:54:03.889Z</updated>
     
     <summary type="html">
     
@@ -61,8 +105,8 @@
   
   <entry>
     <title>约瑟夫环</title>
-    <link href="https://caicaiget.github.io/post/ecc7cefb.html"/>
-    <id>https://caicaiget.github.io/post/ecc7cefb.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-13-%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-13-约瑟夫环.html</id>
     <published>2018-10-13T05:57:05.000Z</published>
     <updated>2018-10-13T06:49:51.523Z</updated>
     
@@ -82,8 +126,8 @@
   
   <entry>
     <title>动态规划算法</title>
-    <link href="https://caicaiget.github.io/post/5dc644dc.html"/>
-    <id>https://caicaiget.github.io/post/5dc644dc.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-13-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-13-动态规划算法.html</id>
     <published>2018-10-13T04:23:20.000Z</published>
     <updated>2018-10-13T05:55:11.965Z</updated>
     
@@ -103,8 +147,8 @@
   
   <entry>
     <title>汉诺塔问题</title>
-    <link href="https://caicaiget.github.io/post/e8c3a72d.html"/>
-    <id>https://caicaiget.github.io/post/e8c3a72d.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-13-%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-13-汉诺塔问题.html</id>
     <published>2018-10-13T03:50:10.000Z</published>
     <updated>2018-10-13T04:33:51.556Z</updated>
     
@@ -124,8 +168,8 @@
   
   <entry>
     <title>python抽象类，接口，归一化</title>
-    <link href="https://caicaiget.github.io/post/b393a237.html"/>
-    <id>https://caicaiget.github.io/post/b393a237.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-13-python%E6%8A%BD%E8%B1%A1%E7%B1%BB.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-13-python抽象类.html</id>
     <published>2018-10-13T03:17:31.000Z</published>
     <updated>2018-10-13T04:33:51.549Z</updated>
     
@@ -154,8 +198,8 @@
   
   <entry>
     <title>python装饰器</title>
-    <link href="https://caicaiget.github.io/post/f1fcd5aa.html"/>
-    <id>https://caicaiget.github.io/post/f1fcd5aa.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-13-python%E8%A3%85%E9%A5%B0%E5%99%A8.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-13-python装饰器.html</id>
     <published>2018-10-13T01:40:36.000Z</published>
     <updated>2018-10-13T04:33:51.552Z</updated>
     
@@ -177,8 +221,8 @@
   
   <entry>
     <title>领扣刷题</title>
-    <link href="https://caicaiget.github.io/post/e3ca59ac.html"/>
-    <id>https://caicaiget.github.io/post/e3ca59ac.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-12-%E7%BA%BD%E6%89%A3%E7%AE%97%E6%B3%95%E9%A2%98.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-12-纽扣算法题.html</id>
     <published>2018-10-12T01:13:50.000Z</published>
     <updated>2018-10-13T01:27:27.441Z</updated>
     
@@ -199,8 +243,8 @@
   
   <entry>
     <title>多继承中的新式类和经典类</title>
-    <link href="https://caicaiget.github.io/post/fe3c32d0.html"/>
-    <id>https://caicaiget.github.io/post/fe3c32d0.html</id>
+    <link href="https://caicaiget.github.io/post/2018-10-07-python%E7%B1%BB.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-07-python类.html</id>
     <published>2018-10-07T14:35:37.000Z</published>
     <updated>2018-10-09T00:44:41.654Z</updated>
     
@@ -218,32 +262,9 @@
   </entry>
   
   <entry>
-    <title>玩转linux操作系统</title>
-    <link href="https://caicaiget.github.io/post/b5875035.html"/>
-    <id>https://caicaiget.github.io/post/b5875035.html</id>
-    <published>2018-09-20T14:35:37.000Z</published>
-    <updated>2018-10-13T01:31:53.951Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;linux成长之路，共勉。&lt;br&gt;
-这篇文章中讲了操作系统的发展史，吃水勿忘挖井人。&lt;br&gt;
-linux一些进阶命令与使用也有涵盖。&lt;br&gt;
-望多多交流。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="linux初接触" scheme="https://caicaiget.github.io/categories/linux%E5%88%9D%E6%8E%A5%E8%A7%A6/"/>
-    
-    
-      <category term="linux" scheme="https://caicaiget.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>markdown语法</title>
-    <link href="https://caicaiget.github.io/post/f134a8e5.html"/>
-    <id>https://caicaiget.github.io/post/f134a8e5.html</id>
+    <link href="https://caicaiget.github.io/post/2018-09-12-markdown%E8%AF%AD%E6%B3%95.html"/>
+    <id>https://caicaiget.github.io/post/2018-09-12-markdown语法.html</id>
     <published>2018-09-12T11:33:36.000Z</published>
     <updated>2018-10-13T04:03:58.628Z</updated>
     
@@ -264,8 +285,8 @@ linux一些进阶命令与使用也有涵盖。&lt;br&gt;
   
   <entry>
     <title>linux常用操作命令</title>
-    <link href="https://caicaiget.github.io/post/b5875035.html"/>
-    <id>https://caicaiget.github.io/post/b5875035.html</id>
+    <link href="https://caicaiget.github.io/post/2018-09-08-linux%E5%91%BD%E4%BB%A4.html"/>
+    <id>https://caicaiget.github.io/post/2018-09-08-linux命令.html</id>
     <published>2018-09-08T14:35:37.000Z</published>
     <updated>2018-10-13T01:32:12.853Z</updated>
     
@@ -286,8 +307,8 @@ linux常用操作命令。&lt;br&gt;
   
   <entry>
     <title>python推荐书籍</title>
-    <link href="https://caicaiget.github.io/post/a71d6e79.html"/>
-    <id>https://caicaiget.github.io/post/a71d6e79.html</id>
+    <link href="https://caicaiget.github.io/post/2018-08-30-Python%E9%98%85%E8%AF%BB.html"/>
+    <id>https://caicaiget.github.io/post/2018-08-30-Python阅读.html</id>
     <published>2018-08-30T14:35:37.000Z</published>
     <updated>2018-10-13T01:28:13.377Z</updated>
     

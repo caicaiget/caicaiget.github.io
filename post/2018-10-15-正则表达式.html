@@ -159,18 +159,18 @@
 
 
 
-  <meta name="description" content="python的终极原则：高内聚，低耦合 在python中函数是一等公民 函数可以赋值给变量，可以作为函数达到参数和返回值 装饰器是一个很好的例子">
-<meta name="keywords" content="装饰器">
+  <meta name="description" content="正则不管在哪里都是吃香的存在 小结正则命令">
+<meta name="keywords" content="正则表达式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python装饰器">
-<meta property="og:url" content="https://caicaiget.github.io/post/f1fcd5aa.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="https://caicaiget.github.io/post/2018-10-15-正则表达式.html">
 <meta property="og:site_name" content="caicai">
-<meta property="og:description" content="python的终极原则：高内聚，低耦合 在python中函数是一等公民 函数可以赋值给变量，可以作为函数达到参数和返回值 装饰器是一个很好的例子">
+<meta property="og:description" content="正则不管在哪里都是吃香的存在 小结正则命令">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-13T04:33:51.552Z">
+<meta property="og:updated_time" content="2018-10-15T13:49:54.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python装饰器">
-<meta name="twitter:description" content="python的终极原则：高内聚，低耦合 在python中函数是一等公民 函数可以赋值给变量，可以作为函数达到参数和返回值 装饰器是一个很好的例子">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="正则不管在哪里都是吃香的存在 小结正则命令">
 
 
 
@@ -179,7 +179,7 @@
 
 
 
-  <link rel="canonical" href="https://caicaiget.github.io/post/f1fcd5aa.html"/>
+  <link rel="canonical" href="https://caicaiget.github.io/post/2018-10-15-正则表达式.html"/>
 
 
 
@@ -189,7 +189,7 @@
   };
 </script>
 
-  <title>python装饰器 | caicai</title>
+  <title>正则表达式 | caicai</title>
   
 
 
@@ -393,7 +393,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://caicaiget.github.io/post/f1fcd5aa.html">
+    <link itemprop="mainEntityOfPage" href="https://caicaiget.github.io/post/2018-10-15-正则表达式.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="菜菜">
@@ -410,7 +410,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python装饰器
+          <h1 class="post-title" itemprop="name headline">正则表达式
               
             
           </h1>
@@ -435,7 +435,7 @@
                 
               
 
-              <time title="创建时间：2018-10-13 09:40:36 / 修改时间：12:33:51" itemprop="dateCreated datePublished" datetime="2018-10-13T09:40:36+08:00">2018-10-13</time>
+              <time title="创建时间：2018-10-15 21:28:15 / 修改时间：21:49:54" itemprop="dateCreated datePublished" datetime="2018-10-15T21:28:15+08:00">2018-10-15</time>
             
 
             
@@ -457,7 +457,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/正则表达式/" itemprop="url" rel="index"><span itemprop="name">正则表达式</span></a></span>
 
                 
                 
@@ -472,10 +472,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/post/f1fcd5aa.html#comments" itemprop="discussionUrl">
+                <a href="/post/2018-10-15-正则表达式.html#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="post/f1fcd5aa.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="post/2018-10-15-正则表达式.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -503,49 +503,106 @@
       
 
       
-        <p>python的终极原则：高内聚，低耦合</p>
-<p>在python中函数是一等公民</p>
-<p>函数可以赋值给变量，可以作为函数达到参数和返回值</p>
-<p>装饰器是一个很好的例子</p>
+        <p>正则不管在哪里都是吃香的存在</p>
+<p>小结正则命令</p>
 <a id="more"></a>
-<h2 id="python的参数"><a class="header-anchor" href="#python的参数">-&gt; </a>python的参数</h2>
+<h2 id="正则语法"><a class="header-anchor" href="#正则语法">-&gt; </a>正则语法</h2>
 <ul>
 <li>
-<p>在讲装饰器之前先先说一下python的可变参数、关键字参数、命名关键字参数</p>
+<p>.  匹配一个任意字符 –  … 代表两个任意字符</p>
 </li>
 <li>
-<p>可变参数和关键字参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">    print(args, kwargs)</span><br></pre></td></tr></table></figure>
-<ol>
-<li>*args： 在参数前面加一个*号，函数内部接收的是一个tuple，可变参数允许你传0个或者任意个参数，这些参数在函数调用时会自己组装成一个tuple</li>
-<li>*<em>kwargs：参数前面添加两个</em>*号，关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict</li>
-<li>当然这些函数的参数名可以自己定义，只是一般用args,kwargs</li>
-</ol>
-</li>
-<li>
-<p>命名关键字参数</p>
-<ol>
-<li>对于定义了关键字参数的函数，函数的调用者可以传入任意不受限制的关键字参数，如果要限制关键字参数的名字，就可以用命名关键字参数，和关键字参数**kw不同，命名关键字参数需要一个特殊分隔符：*号，*号后面的参数被视为命名关键字参数，*后面的参数必须是关键字参数</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, *, city, job)</span>:</span></span><br><span class="line">    print(name, age, city, job)</span><br></pre></td></tr></table></figure>
-<ol>
-<li>如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符*号了：</li>
-<li>与普通的位置参数不同，命名关键字参数*后面的参数必须传入参数名。如果没有传入参数名，调用将会报错</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, *args, city, job)</span>:</span></span><br><span class="line">    print(name, age, args, city, job)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="装饰器"><a class="header-anchor" href="#装饰器">-&gt; </a>装饰器</h2>
-<ul>
-<li>
-<p>装饰器函数：</p>
-<p>用一个函数装饰另一个函数，给他增加额外的功能，装饰器的参数是被装饰的函数，返回的是附带装饰功能的函数，当调用被装饰的函数时，其实是执行了装饰器中返回的那个带装饰功能的函数。给函数加上装饰功能的好处是不需要写重复的代码</p>
-</li>
-<li>
-<p>语法</p>
-<p>在函数前面写上 @装饰器函数名</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">record</span><span class="params">(fn)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 这里的fn就是被装饰的函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">        <span class="comment"># 可以传入任意参数</span></span><br><span class="line">        start = time.time()</span><br><span class="line">        ret_value = fn(*args, **kwargs)</span><br><span class="line">        <span class="comment"># 如果函数有返回值，这里获取返回值</span></span><br><span class="line">        end = time.time()</span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;end - start&#125;</span>秒'</span>)</span><br><span class="line">        <span class="keyword">return</span> ret_value</span><br><span class="line">    <span class="comment"># 返回wrapper函数，实际上在调用被装饰函数时，返回这个函数，拥有被装饰函数的功能并且可以添加新功能</span></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用装饰器</span></span><br><span class="line"><span class="meta">@record</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fac</span><span class="params">(num)</span>:</span></span><br><span class="line">    result = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>, num + <span class="number">1</span>):</span><br><span class="line">         result *= n</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 装饰器的本质是执行了下面的代码</span></span><br><span class="line"><span class="comment"># foo1 = record(foo1)</span></span><br><span class="line"><span class="meta">@record</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo1</span><span class="params">(a, b, c=<span class="number">20</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> a + b + c</span><br></pre></td></tr></table></figure>
-<p>这个装饰器的功能是可以获取每个函数的执行时间。</p>
+<p>\w  匹配字母数字下划线还有中文字符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">.</th>
+<th style="text-align:center">匹配一个任意字符 –  … 代表两个任意字符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\w</td>
+<td style="text-align:center">匹配字母数字下划线还有中文字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\s</td>
+<td style="text-align:center">匹配空白字符(空白指空格，制表符，和回车等所有能产生空白的字符)</td>
+</tr>
+<tr>
+<td style="text-align:center">\d</td>
+<td style="text-align:center">匹配一个数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">检测是否是单词边界(单词的开头，单词的结尾,单词和单词之间的标点空格等)</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">检测字符串是否以给定的正则表达式开头，例如^a —a开头的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">$</td>
+<td style="text-align:center">检测字符串是否以给定的正则表达式结尾</td>
+</tr>
+<tr>
+<td style="text-align:center">\W</td>
+<td style="text-align:center">非字母，数字，下划线</td>
+</tr>
+<tr>
+<td style="text-align:center">\D</td>
+<td style="text-align:center">非数字</td>
+</tr>
+<tr>
+<td style="text-align:center">[]</td>
+<td style="text-align:center">匹配中括号中出现的任意字符(一个中括号只匹配一个字符)</td>
+</tr>
+<tr>
+<td style="text-align:center">[0-9]</td>
+<td style="text-align:center">匹配一个0-9的数字</td>
+</tr>
+<tr>
+<td style="text-align:center">[^]</td>
+<td style="text-align:center">匹配不在[]字符集中的任意一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">匹配0次或者多次</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">匹配1次或者多次</td>
+</tr>
+<tr>
+<td style="text-align:center">?</td>
+<td style="text-align:center">匹配0次或1次</td>
+</tr>
+<tr>
+<td style="text-align:center">{N,}</td>
+<td style="text-align:center">至少匹配N次</td>
+</tr>
+<tr>
+<td style="text-align:center">{,M}</td>
+<td style="text-align:center">最多匹配M次</td>
+</tr>
+<tr>
+<td style="text-align:center">{M,N}</td>
+<td style="text-align:center">匹配至少M次，最多N次（N&gt;M）</td>
+</tr>
+<tr>
+<td style="text-align:center">|</td>
+<td style="text-align:center">分之(相当于逻辑运算中的or)</td>
+</tr>
+<tr>
+<td style="text-align:center">()</td>
+<td style="text-align:center">通过加()来对正则条件进行分组</td>
+</tr>
+<tr>
+<td style="text-align:center">\1…</td>
+<td style="text-align:center">可以通过 ‘’\数字&quot; 来重复匹配前面的分组中匹配的结果。数字的值代表前面的第几个分组</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 
@@ -574,7 +631,7 @@
     <strong>本文作者： </strong>菜菜</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://caicaiget.github.io/post/f1fcd5aa.html" title="python装饰器">https://caicaiget.github.io/post/f1fcd5aa.html</a>
+    <a href="https://caicaiget.github.io/post/2018-10-15-正则表达式.html" title="正则表达式">https://caicaiget.github.io/post/2018-10-15-正则表达式.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -587,7 +644,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/装饰器/" rel="tag"><i class="fa fa-tag"></i> 装饰器</a>
+            <a href="/tags/正则表达式/" rel="tag"><i class="fa fa-tag"></i> 正则表达式</a>
           
         </div>
       
@@ -654,8 +711,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/e3ca59ac.html" rel="next" title="领扣刷题">
-                <i class="fa fa-chevron-left"></i> 领扣刷题
+              <a href="/post/2018-10-15-mysql小结.html" rel="next" title="MYSQL小结">
+                <i class="fa fa-chevron-left"></i> MYSQL小结
               </a>
             
           </div>
@@ -664,8 +721,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/b393a237.html" rel="prev" title="python抽象类，接口，归一化">
-                python抽象类，接口，归一化 <i class="fa fa-chevron-right"></i>
+              <a href="/post/2018-10-16-mysql进阶.html" rel="prev" title="mysql进阶">
+                mysql进阶 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -750,7 +807,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -818,7 +875,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -875,7 +934,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#python的参数"><span class="nav-number">1.</span> <span class="nav-text">-&gt; python的参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰器"><span class="nav-number">2.</span> <span class="nav-text">-&gt; 装饰器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则语法"><span class="nav-number">1.</span> <span class="nav-text">-&gt; 正则语法</span></a></li></ol></div>
             
 
           </div>
@@ -1054,9 +1113,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://caicaiget.github.io/post/f1fcd5aa.html';
-        this.page.identifier = 'post/f1fcd5aa.html';
-        this.page.title = 'python装饰器';
+        this.page.url = 'https://caicaiget.github.io/post/2018-10-15-正则表达式.html';
+        this.page.identifier = 'post/2018-10-15-正则表达式.html';
+        this.page.title = '正则表达式';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

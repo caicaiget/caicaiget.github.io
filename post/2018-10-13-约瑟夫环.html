@@ -159,18 +159,18 @@
 
 
 
-  <meta name="description" content="面向对象的程序设计分三步走：  定义类  数据抽象：找属性（名词） 行为抽象：找方法（动词）   创建对象 给对象发消息">
-<meta name="keywords" content="python抽象类">
+  <meta name="description" content="关于约瑟夫环有多个版本的题目 了解其中一种就可以类推了">
+<meta name="keywords" content="约瑟夫环">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python抽象类，接口，归一化">
-<meta property="og:url" content="https://caicaiget.github.io/post/b393a237.html">
+<meta property="og:title" content="约瑟夫环">
+<meta property="og:url" content="https://caicaiget.github.io/post/2018-10-13-约瑟夫环.html">
 <meta property="og:site_name" content="caicai">
-<meta property="og:description" content="面向对象的程序设计分三步走：  定义类  数据抽象：找属性（名词） 行为抽象：找方法（动词）   创建对象 给对象发消息">
+<meta property="og:description" content="关于约瑟夫环有多个版本的题目 了解其中一种就可以类推了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-13T04:33:51.549Z">
+<meta property="og:updated_time" content="2018-10-13T06:49:51.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python抽象类，接口，归一化">
-<meta name="twitter:description" content="面向对象的程序设计分三步走：  定义类  数据抽象：找属性（名词） 行为抽象：找方法（动词）   创建对象 给对象发消息">
+<meta name="twitter:title" content="约瑟夫环">
+<meta name="twitter:description" content="关于约瑟夫环有多个版本的题目 了解其中一种就可以类推了">
 
 
 
@@ -179,7 +179,7 @@
 
 
 
-  <link rel="canonical" href="https://caicaiget.github.io/post/b393a237.html"/>
+  <link rel="canonical" href="https://caicaiget.github.io/post/2018-10-13-约瑟夫环.html"/>
 
 
 
@@ -189,7 +189,7 @@
   };
 </script>
 
-  <title>python抽象类，接口，归一化 | caicai</title>
+  <title>约瑟夫环 | caicai</title>
   
 
 
@@ -393,7 +393,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://caicaiget.github.io/post/b393a237.html">
+    <link itemprop="mainEntityOfPage" href="https://caicaiget.github.io/post/2018-10-13-约瑟夫环.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="菜菜">
@@ -410,7 +410,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python抽象类，接口，归一化
+          <h1 class="post-title" itemprop="name headline">约瑟夫环
               
             
           </h1>
@@ -435,7 +435,7 @@
                 
               
 
-              <time title="创建时间：2018-10-13 11:17:31 / 修改时间：12:33:51" itemprop="dateCreated datePublished" datetime="2018-10-13T11:17:31+08:00">2018-10-13</time>
+              <time title="创建时间：2018-10-13 13:57:05 / 修改时间：14:49:51" itemprop="dateCreated datePublished" datetime="2018-10-13T13:57:05+08:00">2018-10-13</time>
             
 
             
@@ -457,7 +457,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -472,10 +472,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/post/b393a237.html#comments" itemprop="discussionUrl">
+                <a href="/post/2018-10-13-约瑟夫环.html#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="post/b393a237.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="post/2018-10-13-约瑟夫环.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -503,54 +503,38 @@
       
 
       
-        <p>面向对象的程序设计分三步走：</p>
-<ol>
-<li>定义类
-<ul>
-<li>数据抽象：找属性（名词）</li>
-<li>行为抽象：找方法（动词）</li>
-</ul>
-</li>
-<li>创建对象</li>
-<li>给对象发消息</li>
-</ol>
+        <p>关于约瑟夫环有多个版本的题目</p>
+<p>了解其中一种就可以类推了</p>
 <a id="more"></a>
-<h2 id="接口"><a class="header-anchor" href="#接口">-&gt; </a>接口</h2>
+<h2 id="幸运的基督徒"><a class="header-anchor" href="#幸运的基督徒">-&gt; </a>幸运的基督徒</h2>
 <ul>
 <li>
-<p>接口就是只定义了一些方法，而没有实现。【（这些方法被称为抽象方法），大家自行脑补，在一个方法中直接写了一个pass就是没有实现任何功能的方法，就叫做抽象方法】</p>
-</li>
-<li>
-<p>为什么要有接口？</p>
-<p>接口提取了一群公共的函数，可以把接口当做一个函数的集合，让子类去实现接口中的函数</p>
-</li>
-<li>
-<p>例如：</p>
-<p>我们定义一个动物接口，接口里定义了有跑、吃、呼吸等接口函数，这样老鼠的类去实现了该接口，松鼠的类也去实现了该接口，由二者分别产生一只老鼠和一只松鼠送到你面前，即便是你分别不到底哪只是什么鼠你肯定知道他俩都会跑，都会吃，都能呼吸。</p>
+<p>一共有30个人被困在一个小岛上，其中15个基督徒，15个普通人，岛上的食物不够30个人吃了，于是大家便决定杀死15个人，30个人围成一个圈，其中一个人从1报数，数到9的人便被杀死，又从1开始数，直到只剩下15个人。求基督徒的站位</p>
+<p>这道题我们可以模拟一共有30个人，建一个列表，元素都是为true，杀死一个就赋值为false.</p>
+<p>直接上代码吧</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    persons = [<span class="keyword">True</span>] * <span class="number">30</span> <span class="comment"># 30个人</span></span><br><span class="line">    counter = <span class="number">0</span></span><br><span class="line">    num, index = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> counter &lt; <span class="number">15</span>:</span><br><span class="line">        <span class="keyword">if</span> persons[index]: <span class="comment"># 如果是活人便报数</span></span><br><span class="line">            num += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> num == <span class="number">9</span>:</span><br><span class="line">                persons[index] = <span class="keyword">False</span> <span class="comment"># 当报数到9了就赋值为false</span></span><br><span class="line">                counter += <span class="number">1</span> <span class="comment"># counter + 1 代表死忙一个</span></span><br><span class="line">                num = <span class="number">0</span></span><br><span class="line">        index += <span class="number">1</span> </span><br><span class="line">        index %= <span class="number">30</span> <span class="comment"># 循环到30 便从0开始</span></span><br><span class="line">    <span class="keyword">for</span> person <span class="keyword">in</span> persons:</span><br><span class="line">        print(<span class="string">"基"</span> <span class="keyword">if</span> person <span class="keyword">else</span> <span class="string">"非"</span>, end=<span class="string">""</span>)</span><br><span class="line">    print()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">基基基基非非非非非基基非基基基非基非非基基非非非基非非基基非</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="归一化"><a class="header-anchor" href="#归一化">-&gt; </a>归一化</h2>
+<h2 id="最后一个人"><a class="header-anchor" href="#最后一个人">-&gt; </a>最后一个人</h2>
 <ul>
 <li>
-<p>接口继承实质上是要求“做出一个良好的抽象，这个抽象规定了一个兼容接口，使得外部调用者无需关心具体细节，可一视同仁的处理实现了特定接口的所有对象”——这在程序设计上，叫做归一化</p>
-<p>归一化使得高层的外部使用者可以不加区分的处理所有接口兼容的对象集合——就好象linux的泛文件概念一样，所有东西都可以当文件处理，不必关心它是内存、磁盘、网络还是屏幕（当然，对底层设计者，当然也可以区分出“字符设备”和“块设备”，然后做出针对性的设计：细致到什么程度，视需求而定）。</p>
-<p>归一化，让使用者无需关心对象的类是什么，只需要的知道这些对象都具备某些功能就可以了，这极大地降低了使用者的使用难度。</p>
+<p>1、一群人围在一起坐成环状</p>
+<p>2、从某个编号开始报数</p>
+<p>3、数到某个数的时候，此人出列，下一个人重新报数</p>
+<p>4、一直循环，直到所有人出列  ，约瑟夫环结束</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(count, k)</span>:</span></span><br><span class="line">    l = list(range(<span class="number">1</span>,count+<span class="number">1</span>))</span><br><span class="line">    n=<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> len(l)&gt;<span class="number">1</span>: <span class="comment"># 如果剩余人数大于1继续循环</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> l[:]: <span class="comment"># 遍历剩下的人，遍历列表的切片，保证删除正确的元素</span></span><br><span class="line">            <span class="keyword">if</span> n == k:</span><br><span class="line">                l.remove(i)</span><br><span class="line">                n=<span class="number">1</span>          </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                n += <span class="number">1</span></span><br><span class="line">    print(l[<span class="number">0</span>])</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">func(<span class="number">30</span>, <span class="number">9</span>) <span class="comment"># 30个人，9退出</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="抽象类"><a class="header-anchor" href="#抽象类">-&gt; </a>抽象类</h2>
+<h2 id="利用数学公式"><a class="header-anchor" href="#利用数学公式">-&gt; </a>利用数学公式</h2>
 <ul>
-<li>
-<p>抽象类，就像是类和接口的混合体，具有接口的特性，在python中利用第三方abc模块，实现抽象类。</p>
-<p><strong>抽象类是一个特殊的类，它的特殊之处在于只能被继承，不能被实例化</strong></p>
-</li>
-<li>
-<p>为什么要有抽象类？</p>
-<p>如果说<strong>类是从</strong>一堆<strong>对象</strong>中抽取相同的内容而来的，那么<strong>抽象类</strong>就<strong>是从</strong>一堆<strong>类</strong>中抽取相同的内容而来的，内容包括数据属性和函数属性。</p>
-<p>从实现角度来看，抽象类与普通类的不同之处在于：抽象类中只能有抽象方法（没有实现功能），该类不能被实例化，只能被继承，且子类必须实现抽象方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> abc <span class="keyword">import</span> ABCMeta, abstractmethod</span><br><span class="line"></span><br><span class="line"><span class="comment"># 声明这个类是一个抽象类，不能再创建这个类</span></span><br><span class="line"><span class="comment"># 员工类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span><span class="params">(metaclass=ABCMeta)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 声明一个抽象的静态方法，子类必须继承或重写这个工资结算方法    </span></span><br><span class="line"><span class="meta">    @abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">salary</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">     </span><br><span class="line"><span class="comment"># 经理类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manager</span><span class="params">(Employee)</span>:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">salary</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">15000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 程序员</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Programmer</span><span class="params">(Employee)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.working_hour = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">	<span class="comment"># 将方法变为属性可以直接调用</span></span><br><span class="line"><span class="meta">    @property   </span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">salary</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">200</span> * self.working_hour</span><br><span class="line">      </span><br><span class="line"><span class="comment"># 销售员</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Saleman</span><span class="params">(Employee)</span>:</span></span><br><span class="line">    </span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">         self.name = name</span><br><span class="line">         self.sales = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">     @property</span></span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">salary</span><span class="params">(self)</span>:</span></span><br><span class="line">         <span class="keyword">return</span> <span class="number">1800</span> + self.sales * <span class="number">0.05</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 实例化多个对象存储到列表</span></span><br><span class="line">    emps = [</span><br><span class="line">        Manager(<span class="string">'刘备'</span>), Manager(<span class="string">'曹操'</span>),</span><br><span class="line">        Programmer(<span class="string">'诸葛亮'</span>), Programmer(<span class="string">'司马懿'</span>),</span><br><span class="line">        Saleman(<span class="string">'貂蝉'</span>)</span><br><span class="line">    ]</span><br><span class="line">    <span class="comment"># 将所有对象遍历出来</span></span><br><span class="line">    <span class="keyword">for</span> emp <span class="keyword">in</span> emps:</span><br><span class="line">        <span class="comment"># 针对不同的类的对象进行不同的处理</span></span><br><span class="line">        <span class="keyword">if</span> isinstance(emp, Programmer):</span><br><span class="line">            hour = int(input(<span class="string">'请输入&#123;emp.name&#125;工作小时数：'</span>))</span><br><span class="line">            emp.working_hour = hour</span><br><span class="line">        <span class="keyword">if</span> isinstance(emp, Saleman):</span><br><span class="line">            sales = int(input(<span class="string">'请输入&#123;emp.name&#125;销售业绩：'</span>))</span><br><span class="line">            emp.sales = sales  </span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;emp.name&#125;</span>的月薪为<span class="subst">&#123;emp.salary&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-</li>
+<li>f[1] = 0； //当一个人的时候，出队人员编号为0<br>
+f[i] = (f[i-1] + m)%i //m表示每次数到该数的人出列，i表示当前序列的总人数<br>
+当i=n时用个循环就行了<br>
+而我们只需要得到第n次出列的结果即可，那么不需要另外声明数组保存数据，只需要直接一个for循环求得n阶约瑟夫环问题的结果即可<br>
+由于往往现实生活中编号是从n-1，那么我们把最后的结果加1即可。</li>
 </ul>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(n, m)</span>:</span></span><br><span class="line">    s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, n+<span class="number">1</span>):</span><br><span class="line">        s = (s + m) % i</span><br><span class="line">    print(s+<span class="number">1</span>)</span><br><span class="line">f(<span class="number">11</span>, <span class="number">9</span>)这个返回的是最后一个人的编号</span><br></pre></td></tr></table></figure>
       
 	 <div>  <div>
     
@@ -576,7 +560,7 @@
     <strong>本文作者： </strong>菜菜</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://caicaiget.github.io/post/b393a237.html" title="python抽象类，接口，归一化">https://caicaiget.github.io/post/b393a237.html</a>
+    <a href="https://caicaiget.github.io/post/2018-10-13-约瑟夫环.html" title="约瑟夫环">https://caicaiget.github.io/post/2018-10-13-约瑟夫环.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -589,7 +573,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python抽象类/" rel="tag"><i class="fa fa-tag"></i> python抽象类</a>
+            <a href="/tags/约瑟夫环/" rel="tag"><i class="fa fa-tag"></i> 约瑟夫环</a>
           
         </div>
       
@@ -656,8 +640,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/f1fcd5aa.html" rel="next" title="python装饰器">
-                <i class="fa fa-chevron-left"></i> python装饰器
+              <a href="/post/2018-10-13-动态规划算法.html" rel="next" title="动态规划算法">
+                <i class="fa fa-chevron-left"></i> 动态规划算法
               </a>
             
           </div>
@@ -666,8 +650,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/e8c3a72d.html" rel="prev" title="汉诺塔问题">
-                汉诺塔问题 <i class="fa fa-chevron-right"></i>
+              <a href="/post/2018-10-15-mysql小结.html" rel="prev" title="MYSQL小结">
+                MYSQL小结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -752,7 +736,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -820,7 +804,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -877,7 +863,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">-&gt; 接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归一化"><span class="nav-number">2.</span> <span class="nav-text">-&gt; 归一化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类"><span class="nav-number">3.</span> <span class="nav-text">-&gt; 抽象类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#幸运的基督徒"><span class="nav-number">1.</span> <span class="nav-text">-&gt; 幸运的基督徒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后一个人"><span class="nav-number">2.</span> <span class="nav-text">-&gt; 最后一个人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用数学公式"><span class="nav-number">3.</span> <span class="nav-text">-&gt; 利用数学公式</span></a></li></ol></div>
             
 
           </div>
@@ -1056,9 +1042,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://caicaiget.github.io/post/b393a237.html';
-        this.page.identifier = 'post/b393a237.html';
-        this.page.title = 'python抽象类，接口，归一化';
+        this.page.url = 'https://caicaiget.github.io/post/2018-10-13-约瑟夫环.html';
+        this.page.identifier = 'post/2018-10-13-约瑟夫环.html';
+        this.page.title = '约瑟夫环';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
