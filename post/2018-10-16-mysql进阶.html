@@ -159,18 +159,20 @@
 
 
 
-  <meta name="description" content="mysql的进阶知识，加油！ 从删库到跑路？。。">
+  <meta name="description" content="mysql的进阶知识，加油！ 从删库到跑路 ？。。">
 <meta name="keywords" content="mysql进阶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql进阶">
 <meta property="og:url" content="https://caicaiget.github.io/post/2018-10-16-mysql进阶.html">
 <meta property="og:site_name" content="caicai">
-<meta property="og:description" content="mysql的进阶知识，加油！ 从删库到跑路？。。">
+<meta property="og:description" content="mysql的进阶知识，加油！ 从删库到跑路 ？。。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-16T12:56:16.033Z">
+<meta property="og:image" content="https://caicaiget.github.io/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6%5Cshi.png">
+<meta property="og:updated_time" content="2018-10-17T03:30:59.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql进阶">
-<meta name="twitter:description" content="mysql的进阶知识，加油！ 从删库到跑路？。。">
+<meta name="twitter:description" content="mysql的进阶知识，加油！ 从删库到跑路 ？。。">
+<meta name="twitter:image" content="https://caicaiget.github.io/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6%5Cshi.png">
 
 
 
@@ -435,12 +437,24 @@
                 
               
 
-              <time title="创建时间：2018-10-16 20:10:37 / 修改时间：20:56:16" itemprop="dateCreated datePublished" datetime="2018-10-16T20:10:37+08:00">2018-10-16</time>
+              <time title="创建时间：2018-10-16 20:10:37" itemprop="dateCreated datePublished" datetime="2018-10-16T20:10:37+08:00">2018-10-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-17 11:30:59" itemprop="dateModified" datetime="2018-10-17T11:30:59+08:00">2018-10-17</time>
               
             
           </span>
@@ -504,9 +518,9 @@
 
       
         <p>mysql的进阶知识，加油！</p>
-<p>从删库到跑路？。。</p>
+<p>从删库到跑路 ？。。</p>
 <a id="more"></a>
-<h2 id="关于编码"><a class="header-anchor" href="#关于编码">-&gt; </a>关于编码</h2>
+<h2 id="编码与约束"><a class="header-anchor" href="#编码与约束">-&gt; </a>编码与约束</h2>
 <ul>
 <li>
 <p>设置编码</p>
@@ -516,12 +530,84 @@
 </li>
 <li>
 <p>创建一个学院表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 创建学院表</span><br><span class="line">create table tb_college</span><br><span class="line">(</span><br><span class="line">collid int not null auto_increment comment &apos;学院编号&apos;,</span><br><span class="line">collname varchar(50) not null comment &apos;学院名称&apos;,</span><br><span class="line">collmaster varchar(20) not null comment &apos;院长姓名&apos;,</span><br><span class="line">collweb varchar(511) default &apos;&apos; comment &apos;学院网站&apos;,</span><br><span class="line">primary key (collid)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-- 创建学院表</span><br><span class="line">create table tb_college</span><br><span class="line">(</span><br><span class="line">collid int not null auto_increment comment &apos;学院编号&apos;,</span><br><span class="line">collname varchar(50) not null comment &apos;学院名称&apos;,</span><br><span class="line">collmaster varchar(20) not null comment &apos;院长姓名&apos;,</span><br><span class="line">collweb varchar(511) default &apos;&apos; comment &apos;学院网站&apos;,</span><br><span class="line">primary key (collid)</span><br><span class="line">);</span><br><span class="line">-- 创建教师表</span><br><span class="line">create table tb_teacher</span><br><span class="line">(</span><br><span class="line">teaid int not null comment &apos;教师工号&apos;,</span><br><span class="line">tname varchar(20) not null comment &apos;教师姓名&apos;,</span><br><span class="line">title varchar(10) default &apos;&apos; comment &apos;职称&apos;,</span><br><span class="line">collid int not null comment &apos;所属学院编号&apos;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>添加唯一约束</p>
 <p>代表该列值不能有重复</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 添加唯一约束</span><br><span class="line">alter table tb_college add constraint uni_college_collname unique (collname);</span><br><span class="line"></span><br><span class="line">-- 删除唯一约束</span><br><span class="line">alter table tb_college drop index uni_college_collname</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>添加外键约束</p>
+</li>
+<li>
+<p>外键分为</p>
+<p>1 对 1：</p>
+<p>1 对 多： 一般在多的表中添加外键</p>
+<p>多 对 多 ：在关系型数据中，两张表不能表示两张表的关系，多对多时需要添加中间表进行外键约束</p>
+</li>
+<li>
+<p>给教师表添加外键约束collid</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 添加外键约束</span><br><span class="line">alter table tb_student add constraint fk_student_collid foreign key (collid) references tb_college (collid);</span><br><span class="line">-- 删除外键约束</span><br><span class="line">alter table tb_score drop foreign key fk_score_sid;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="e-r-实体关系图"><a class="header-anchor" href="#e-r-实体关系图">-&gt; </a>E-R(实体关系图)</h2>
+<ul>
+<li>
+<p>外键/外键约束/ - 外来的主键 - 参照完整性</p>
+</li>
+<li>
+<p>数据的完整性</p>
+<ol>
+<li>
+<p>实体完整性：每一条记录都是独一无二的冗余</p>
+<p>主键/唯一索引(唯一约束)</p>
+</li>
+<li>
+<p>参照完整性：B表参照了A表，A表没有的记录在B表中绝不能出现<br>
+出现</p>
+<p>外键：给字表添加外键时要与父表的主键变量类型一致一致</p>
+</li>
+<li>
+<p>域完整性：录入的数据都是有效的</p>
+<p>数据类型/非空约束/默认值约束/检查约束（mysql不生效）</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><img src="/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6%5Cshi.png" alt="shi"></p>
+<h2 id="查询"><a class="header-anchor" href="#查询">-&gt; </a>查询</h2>
+<ul>
+<li>
+<p>查询时sql语句的执行优先顺序</p>
+<ol>
+<li>FROM</li>
+<li>WHERE</li>
+<li>GROUP BY</li>
+<li>HAVING</li>
+<li>SELECT</li>
+<li>DISTINCT</li>
+<li>UNION</li>
+<li>ORDER BY</li>
+</ol>
+</li>
+<li>
+<p>聚合函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- max() / min() / sum() / avg() / count()</span><br><span class="line">elect min(birth) from tb_student</span><br><span class="line">select max(birth) from tb_student</span><br><span class="line"></span><br><span class="line">-- 这些二函数经常与 group by 连用</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>连接查询法</p>
+<p>查询时如果不添加筛选条件得到的结果会形成笛卡儿积</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-- 查询学生姓名、所选课程名称和成绩(连接查询)</span><br><span class="line">-- 连接查询方法一</span><br><span class="line">select sname,cname,mark</span><br><span class="line">from tb_student,tb_course,tb_score</span><br><span class="line">where stuid=sid and couid=cid and mark is not null;</span><br><span class="line"></span><br><span class="line">-- 连接查询方法二</span><br><span class="line">select sname,cname,mark from tb_student</span><br><span class="line">inner join tb_score on stuid=sid</span><br><span class="line">inner join tb_course on couid=cid</span><br><span class="line">where mark is not null;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>group by 分组查询</p>
+<p>安照 by 后面的列名进行分组查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 查询选了两门以上的课程的学生姓名(子查询/分组条件/集合运算)</span><br><span class="line">-- () 改变优先级,先执行()里的语句</span><br><span class="line">select sname from tb_student where stuid in( </span><br><span class="line">select sid from tb_score group by sid having count(sid)&gt;2);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>子查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 子查询 - 在一个查询中又使用了另一个查询</span><br><span class="line">-- 查询年龄最大的学生的姓名(子查询+运算)</span><br><span class="line">select sname as 姓名,year(now())-year(birth) as 年龄 from tb_student where birth=(select min(birth) from tb_student)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -853,7 +939,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于编码"><span class="nav-number">1.</span> <span class="nav-text">-&gt; 关于编码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编码与约束"><span class="nav-number">1.</span> <span class="nav-text">-&gt; 编码与约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e-r-实体关系图"><span class="nav-number">2.</span> <span class="nav-text">-&gt; E-R(实体关系图)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询"><span class="nav-number">3.</span> <span class="nav-text">-&gt; 查询</span></a></li></ol></div>
             
 
           </div>
