@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://caicaiget.github.io/post/2018-09-08-linux%E5%91%BD%E4%BB%A4.html</loc>
+    <lastmod>2018-10-18T06:10:31.628Z</lastmod>
+  </url>  <url>
     <loc>https://caicaiget.github.io/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6.html</loc>
-    <lastmod>2018-10-17T03:30:59.728Z</lastmod>
+    <lastmod>2018-10-18T03:41:16.302Z</lastmod>
   </url>  <url>
     <loc>https://caicaiget.github.io/post/2018-10-15-mysql%E5%B0%8F%E7%BB%93.html</loc>
     <lastmod>2018-10-16T13:33:04.430Z</lastmod>
@@ -30,9 +33,6 @@
   </url>  <url>
     <loc>https://caicaiget.github.io/post/2018-09-12-markdown%E8%AF%AD%E6%B3%95.html</loc>
     <lastmod>2018-10-13T04:03:58.628Z</lastmod>
-  </url>  <url>
-    <loc>https://caicaiget.github.io/post/2018-09-08-linux%E5%91%BD%E4%BB%A4.html</loc>
-    <lastmod>2018-10-13T01:32:12.853Z</lastmod>
   </url>  <url>
     <loc>https://caicaiget.github.io/post/2018-08-30-Python%E9%98%85%E8%AF%BB.html</loc>
     <lastmod>2018-10-13T01:28:13.377Z</lastmod>
