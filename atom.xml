@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caicaiget.github.io/"/>
-  <updated>2018-10-16T08:53:59.337Z</updated>
+  <updated>2018-10-20T08:02:04.846Z</updated>
   <id>https://caicaiget.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>知识点总结</title>
+    <link href="https://caicaiget.github.io/post/2018-10-20-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-20-知识点总结.html</id>
+    <published>2018-10-20T07:50:23.000Z</published>
+    <updated>2018-10-20T08:02:04.846Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一些重要的知识点。&lt;/p&gt;
+&lt;p&gt;一些面试题目，加油！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="总结" scheme="https://caicaiget.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="算法" scheme="https://caicaiget.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis小结</title>
+    <link href="https://caicaiget.github.io/post/2018-10-20-redis%E5%B0%8F%E7%BB%93.html"/>
+    <id>https://caicaiget.github.io/post/2018-10-20-redis小结.html</id>
+    <published>2018-10-20T03:34:10.000Z</published>
+    <updated>2018-10-20T07:18:54.478Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;高性能的非关系性数据库redis&lt;/p&gt;
+&lt;p&gt;在这里进行小结一波。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="sql" scheme="https://caicaiget.github.io/categories/sql/"/>
+    
+    
+      <category term="redis" scheme="https://caicaiget.github.io/tags/redis/"/>
+    
+  </entry>
   
   <entry>
     <title>linux进阶</title>
@@ -44,7 +86,7 @@ linux一些进阶命令与使用也有涵盖。&lt;br&gt;
     <link href="https://caicaiget.github.io/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6.html"/>
     <id>https://caicaiget.github.io/post/2018-10-16-mysql进阶.html</id>
     <published>2018-10-16T12:10:37.000Z</published>
-    <updated>2018-10-18T03:41:16.302Z</updated>
+    <updated>2018-10-20T04:19:14.351Z</updated>
     
     <summary type="html">
     
@@ -288,7 +330,7 @@ linux一些进阶命令与使用也有涵盖。&lt;br&gt;
     <link href="https://caicaiget.github.io/post/2018-09-08-linux%E5%91%BD%E4%BB%A4.html"/>
     <id>https://caicaiget.github.io/post/2018-09-08-linux命令.html</id>
     <published>2018-09-08T14:35:37.000Z</published>
-    <updated>2018-10-18T06:10:31.628Z</updated>
+    <updated>2018-10-19T07:02:41.548Z</updated>
     
     <summary type="html">
     

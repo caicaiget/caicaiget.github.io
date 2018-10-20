@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://caicaiget.github.io/post/2018-09-08-linux%E5%91%BD%E4%BB%A4.html</loc>
+    <loc>https://caicaiget.github.io/post/2018-10-20-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.html</loc>
     
-    <lastmod>2018-10-18T06:10:31.628Z</lastmod>
+    <lastmod>2018-10-20T08:02:04.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://caicaiget.github.io/post/2018-10-20-redis%E5%B0%8F%E7%BB%93.html</loc>
+    
+    <lastmod>2018-10-20T07:18:54.478Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://caicaiget.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-10-20T06:32:52.512Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://caicaiget.github.io/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6.html</loc>
     
-    <lastmod>2018-10-18T03:41:16.302Z</lastmod>
+    <lastmod>2018-10-20T04:19:14.351Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://caicaiget.github.io/post/2018-09-08-linux%E5%91%BD%E4%BB%A4.html</loc>
+    
+    <lastmod>2018-10-19T07:02:41.548Z</lastmod>
     
   </url>
   
@@ -96,13 +117,6 @@
     <loc>https://caicaiget.github.io/post/2018-10-07-python%E7%B1%BB.html</loc>
     
     <lastmod>2018-10-09T00:44:41.654Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://caicaiget.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-10-08T12:43:50.271Z</lastmod>
     
   </url>
   

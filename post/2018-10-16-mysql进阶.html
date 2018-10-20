@@ -168,7 +168,7 @@
 <meta property="og:description" content="mysql的进阶知识，加油！ 当心从删库到跑路 ？！！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://caicaiget.github.io/post/2018-10-16-mysql%E8%BF%9B%E9%98%B6%5Cshi.png">
-<meta property="og:updated_time" content="2018-10-18T03:41:16.302Z">
+<meta property="og:updated_time" content="2018-10-20T04:19:14.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql进阶">
 <meta name="twitter:description" content="mysql的进阶知识，加油！ 当心从删库到跑路 ？！！">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-18 11:41:16" itemprop="dateModified" datetime="2018-10-18T11:41:16+08:00">2018-10-18</time>
+                <time title="修改时间：2018-10-20 12:19:14" itemprop="dateModified" datetime="2018-10-20T12:19:14+08:00">2018-10-20</time>
               
             
           </span>
@@ -526,7 +526,7 @@
 <p>设置编码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- utf8_bin 搜索时区分大小写</span><br><span class="line">-- utf8_bin_ci 搜索时不区分大小写</span><br><span class="line">create database SRS default charset utf8 collate utf8_bin;</span><br></pre></td></tr></table></figure>
 <p>设置数据SRS的默认编码为utf8</p>
-<p>mysql的字符序遵从命名惯例。以_ci(表示大小写不敏感)，以_cs(表示大小写敏感)，以_bin(表示用编码值进行比较</p>
+<p>collate utf8_bin; —&gt; mysql的字符序遵从命名惯例。以_ci(表示大小写不敏感)，以_cs(表示大小写敏感)，以_bin(表示用编码值进行比较</p>
 </li>
 <li>
 <p>创建一个学院表</p>
@@ -610,7 +610,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 子查询 - 在一个查询中又使用了另一个查询</span><br><span class="line">-- 查询年龄最大的学生的姓名(子查询+运算)</span><br><span class="line">select sname as 姓名,year(now())-year(birth) as 年龄 from tb_student where birth=(select min(birth) from tb_student)</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>子啊查询时，去重操作和集合运算效率是非常底下的</p>
+<p>子查询时，去重操作和集合运算效率是非常底下的</p>
 <p>通常建议去用exists或not exists 操作来代替去重和集合运算</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-- 去重和集合</span><br><span class="line">select ename as 主管,job from tbemp</span><br><span class="line">where eno in (select distinct mgr from tbemp where mgr is not null);</span><br><span class="line">-- exists 判断</span><br><span class="line">select ename,job from tbemp t1</span><br><span class="line">where exists (select &apos;x&apos; from tbemp t2 where t1.eno=t2.mgr);</span><br></pre></td></tr></table></figure>
 <p>当后面where语句的条件为true时才会生成映射表x列，为false时映射表为空</p>
@@ -657,7 +657,18 @@
 </ol>
 </li>
 <li>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">-- start transaction; 开始事务</span><br><span class="line">update tb_score set mark=mark-2 where sid=1001 and mark is not null;</span><br><span class="line">update tb_score set mark=mark+2 where sid=1002 and mark is not null;</span><br><span class="line">-- 数据提交,只有提交后才生效</span><br><span class="line">commit;</span><br><span class="line">-- 事务回滚 - 未提交时可以回滚</span><br><span class="line">rollback;</span><br></pre></td></tr></table></figure>
+<p>在出现并发事务访问数据的时候，数据库底层有锁机制来保护数据，但是通常我们在写SQL的时候不用显示的书写锁操作，数据库会根据我们设定的事务隔离级别自动的数据加锁。</p>
+</li>
+<li>
+<p>并发数据访问可能出现的5中问题</p>
+<ol>
+<li>第一类丢失更新</li>
+<li>第二类丢失更新</li>
+<li>脏读  ： 隔离级别为Read Committed可以避免</li>
+<li>不可重复读 - 一个事务在读取查询结果时发现其他事务更新了数据导致无法读取： 隔离级别为Repeatable Read可以避免</li>
+<li>幻读 - 一个事务在执行查询时发现被其他事务提交了新的数据： 隔离级别为Serializable可以避免</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">-- start transaction; 开始事务</span><br><span class="line">update tb_score set mark=mark-2 where sid=1001 and mark is not null;</span><br><span class="line">update tb_score set mark=mark+2 where sid=1002 and mark is not null;</span><br><span class="line">-- 数据提交,只有提交后才生效</span><br><span class="line">commit;</span><br><span class="line">-- 事务回滚 - 未提交时可以回滚</span><br><span class="line">rollback;</span><br><span class="line"></span><br><span class="line">-- 四个级别</span><br><span class="line">-- Read Uncommitted</span><br><span class="line">-- Read Committed</span><br><span class="line">-- Repeatable Read</span><br><span class="line">-- Serializable</span><br><span class="line">select @@tx_isolation; -- 查看事务隔离级别</span><br><span class="line">session(当前会话)/global（全局）</span><br><span class="line">set session/global transaction isolation level read committed; -- 设置事务隔离级别</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="创建用户"><a class="header-anchor" href="#创建用户">-&gt; </a>创建用户</h2>
@@ -893,7 +904,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -922,7 +933,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -963,7 +978,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
