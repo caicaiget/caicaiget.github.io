@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="一个可以交流学习的网站"><title>Django小结 | caicai</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Django小结</h1><a id="logo" href="/.">caicai</a><p class="description">长路漫漫，唯py作伴。欢迎大家一起交流学习！</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">Django小结</h1><div class="post-meta"><a href="/post/2018-10-22-Django小结.html#comments" class="comment-count"><i id="changyan_count_unit" data-xid="post/2018-10-22-Django小结.html"></i>留言,<i id="changyan_parti_unit" data-xid="post/2018-10-22-Django小结.html"></i>参与</a><p><span class="date">Oct 22, 2018</span><span><a href="/categories/Django/" class="category">Django</a></span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><p>Django是一个用Python编写的开放源代码的Web应用框架，代码是开源的。</p>
+<p>此系统采用了MVC的框架模式, 也可以称为MTV模式</p>
+<a id="more"></a>
+<h2 id="什么是mvc模式"><a class="header-anchor" href="#什么是mvc模式"></a>什么是MVC模式</h2>
+<p>MVC全名是Model View Controller。（强制性的使应用程序的输入，处理和输出分开）</p>
+<ul>
+<li>
+<p>模型（Model）</p>
+<p>即数据存取层。用于封装于应用程序的业务逻辑相关的数据，以及对数据的处理。说白了就是模型对象负责在数据库中存取数据</p>
+</li>
+<li>
+<p>视图（View）</p>
+<p>即表现层。负责数据的显示和呈现。渲染的html页面给用户，或者返回数据给用户。</p>
+</li>
+<li>
+<p>控制器（Coneroller）</p>
+<p>即业务逻辑层。负责从用户端收集用户的输入，进行业务逻辑处理，包括向模型中发送数据，进行CRUD操作。</p>
+</li>
+<li>
+<p>MVC就是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。</p>
+</li>
+</ul>
+<p><img src="/post/2018-10-22-Django%E5%B0%8F%E7%BB%93/mvc.jpg" alt="mvc"></p>
+<h2 id="django的模式简介"><a class="header-anchor" href="#django的模式简介"></a>django的模式简介</h2>
+<ul>
+<li>
+<p>django的模式应该是MVT模式，但是本质与MVC没什么区别</p>
+<p>Model： 负责业务与数据库(ORM)的对象</p>
+<p>View： 负责业务逻辑并适当调用Model和Template</p>
+<p>Template: 负责把页面渲染展示给用户</p>
+<p>注意： Django中还有一个url分发器，也叫作路由。主要用于将url请求发送给不同的View处理，View在进行相关的业务逻辑处理。</p>
+</li>
+</ul>
+<h2 id="创建配置django项目"><a class="header-anchor" href="#创建配置django项目"></a>创建配置django项目</h2>
+<ul>
+<li>
+<p>创建<code>django-admin startproject day01</code></p>
+<p>创建完成后能看到有下面文件</p>
+<p><img src="/post/2018-10-22-Django%E5%B0%8F%E7%BB%93%5Cdj.png" alt="dj"></p>
+<p><a href="http://manage.py" target="_blank" rel="noopener">manage.py</a>：是Django用于管理本项目的管理工具集，之后站点运行，数据库自动生成，数据表的修改等都是通过该文件完成。</p>
+<p>_<em>init</em>_.py： 指明该目录结构是一个python包，暂无内容，在后期会初始化一些工具会使用到。</p>
+<p><a href="http://seetings.py" target="_blank" rel="noopener">seetings.py</a>： Django项目的配置文件，其中定义了本项目的引用组件，项目名，数据库，静态资源，调试模式，域名限制等</p>
+<p><a href="http://urls.py" target="_blank" rel="noopener">urls.py</a>：项目的URL路由映射，实现客户端请求url由哪个模块进行响应。</p>
+<p><a href="http://wsgi.py" target="_blank" rel="noopener">wsgi.py</a>：定义WSGI接口信息，通常本文件生成后无需改动</p>
+</li>
+<li>
+<p>启动项目</p>
+<p><code>python manage.py runserver 8080</code></p>
+<p>在8080端口启动django，端口可以不用写，启动会随机分配端口。但是这样就只能自己访问，如果想要所有ip访问就指定ip<code>0.0.0.0:8080</code></p>
+<p>启动后可以便可以访问了http://127.0.0.1:8000/</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">System check identified no issues (0 silenced).</span><br><span class="line">October 22, 2018 - 17:07:22</span><br><span class="line">Django version 1.11, using settings 'day01.settings'</span><br><span class="line">Starting development server at http://127.0.0.1:8000/</span><br><span class="line">Quit the server with CTRL-BREAK.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>配置setting.py文件</p>
+<ol>
+<li>
+<p>LANGUAGE_CODE = ‘zh-hans’ 表示中文</p>
+<p>LANGUAGE_CODE = ‘en-us’ 表示英文</p>
+<p>设置时区：	TIME_ZONE = ‘Asia/Shanghai’</p>
+<p>UTC：世界标准时间，也就是平常说的零时区。</p>
+<p>北京时间表示东八区时间，即UTC+8</p>
+</li>
+<li>
+<p>由于python3没有自带数据库处理包，需要安装<code>pymysql</code>，在python2中有自带的<code>MySQLdb</code></p>
+<p>安装过后需要在<code>__init__.py</code>中添加</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import pymysql</span><br><span class="line"></span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改<code>setting.py</code>中的DATABASE，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    'default': &#123;</span><br><span class="line">        'ENGINE': 'django.db.backends.mysql',</span><br><span class="line">        'NAME': 'dj',  # 数据库</span><br><span class="line">        'USER': 'root', </span><br><span class="line">        'PASSWORD': '123456',</span><br><span class="line">        'HOST': '127.0.0.1',</span><br><span class="line">        'port': 3306</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改完成后执行<code>python manage.py migrate</code>，执行后会创建django需要的数据表，有如下表</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><img src="/post/2018-10-22-Django%E5%B0%8F%E7%BB%93%5Csql.PNG" alt="sql"></p>
+<p>​		前面6个表是跟权限相关的表，auth_user是用户表，我们创建一个超级管理员用户</p>
+<p>​		<code>python manage.py createsuperuser</code>，账号为admin，输入管理员密码。你就会发现auth_user表中多了一个记录。</p>
+<h2 id="访问管理后台"><a class="header-anchor" href="#访问管理后台"></a>访问管理后台</h2>
+<p>访问<code>http://127.0.0.1:8000/admin/</code></p>
+<p>并登陆</p>
+<p><img src="/post/2018-10-22-Django%E5%B0%8F%E7%BB%93%5Cadmin.png" alt="admin"></p>
+</div><div class="tags"><a href="/tags/Django/">Django</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/post/2018-10-22-virtualenv虚拟环境.html" class="pre">virtualenv虚拟环境</a><a href="/post/2018-10-20-知识点总结.html" class="next">知识点总结</a></div><div id="comments"><div id="SOHUCS" sid="post/2018-10-22-Django小结.html"></div></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是mvc模式"><span class="toc-text">什么是MVC模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#django的模式简介"><span class="toc-text">django的模式简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建配置django项目"><span class="toc-text">创建配置django项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问管理后台"><span class="toc-text">访问管理后台</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-22-virtualenv虚拟环境.html">virtualenv虚拟环境</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-22-Django小结.html">Django小结</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-20-知识点总结.html">知识点总结</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-20-redis小结.html">redis小结</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-16-linux进阶.html">linux进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-16-mysql进阶.html">mysql进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-15-正则表达式.html">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-15-mysql小结.html">MYSQL小结</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-13-约瑟夫环.html">约瑟夫环</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2018-10-13-动态规划算法.html">动态规划算法</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-gui"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MYSQL/">MYSQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/总结/">总结</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/">正则表达式</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法题/">算法题</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/Django/" style="font-size: 15px;">Django</a> <a href="/tags/动态规划算法/" style="font-size: 15px;">动态规划算法</a> <a href="/tags/汉诺塔问题/" style="font-size: 15px;">汉诺塔问题</a> <a href="/tags/约瑟夫环/" style="font-size: 15px;">约瑟夫环</a> <a href="/tags/MYSQL/" style="font-size: 15px;">MYSQL</a> <a href="/tags/正则表达式/" style="font-size: 15px;">正则表达式</a> <a href="/tags/linux进阶/" style="font-size: 15px;">linux进阶</a> <a href="/tags/mysql进阶/" style="font-size: 15px;">mysql进阶</a> <a href="/tags/redis/" style="font-size: 15px;">redis</a> <a href="/tags/装饰器/" style="font-size: 15px;">装饰器</a> <a href="/tags/virtualenv虚拟环境/" style="font-size: 15px;">virtualenv虚拟环境</a> <a href="/tags/django虚拟环境创建/" style="font-size: 15px;">django虚拟环境创建</a> <a href="/tags/算法/" style="font-size: 15px;">算法</a> <a href="/tags/linux命令/" style="font-size: 15px;">linux命令</a> <a href="/tags/阅读/" style="font-size: 15px;">阅读</a> <a href="/tags/markdown语法/" style="font-size: 15px;">markdown语法</a> <a href="/tags/类/" style="font-size: 15px;">类</a> <a href="/tags/python抽象类/" style="font-size: 15px;">python抽象类</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">菜菜.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script><script>window._config = { showScore: true };
+(function(){ 
+  var appid = 'cytSo6336'; 
+  var conf = '125122757b42de6737f7a860073dd76e'; 
+  var width = window.innerWidth || document.documentElement.clientWidth; 
+  var nodes =document.getElementsByTagName("head")[0]||document.head||document.documentElement;
+  if (/(Android|iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && width < 750) {  
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+  }
+  else { 
+    var loadJs=function(d,a){
+      var b=document.createElement("script");b.setAttribute("type","text/javascript");
+      b.setAttribute("charset","UTF-8");
+      b.setAttribute("src",d);
+      if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+      nodes.appendChild(b)
+    };
+    loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); 
+  } 
+  var loadCss = function(cssString){  
+    var style=document.createElement("style");  
+    style.setAttribute("type", "text/css");  
+    if(style.styleSheet){// IE  
+        style.styleSheet.cssText = cssString;  
+    } else {// w3c  
+        var cssText = document.createTextNode(cssString);  
+        style.appendChild(cssText);  
+    }
+    nodes.appendChild(style);
+  }
+  window.onload=function(){loadCss('.module-hot-topic,.module-cmt-float-bar{display:none!important}#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .wrap-action-w .cbox-prompt-w span.prompt-empty-w,#SOHUCS #SOHU_MAIN .module-cmt-float-bar .wrap-cont-w .cont-form-w .form-text-w span.text-null,#SOHUCS #SOHU_MAIN .module-cmt-float-bar .wrap-cont-w .cont-minwidth-w div.cont-comment-w a.comment-link-w,#SOHUCS #SOHU_MAIN .module-cmt-float-bar .wrap-cont-w .cont-minwidth-w div.cont-comment-w span.comment-text-w,#SOHUCS #SOHU_MAIN .module-cmt-footer .section-service-w div.service-wrap-w a:hover,#SOHUCS #SOHU_MAIN .module-cmt-header .section-cbox-w .block-head-w div.header-login,#SOHUCS #SOHU_MAIN .module-cmt-header .section-title-w .title-user-w .user-wrap-w span.wrap-name-w,#SOHUCS #SOHU_MAIN .module-cmt-list .action-click-gw span.click-disable-eg a em.icon-name-bg,#SOHUCS #SOHU_MAIN .module-cmt-list .block-title-gw ul li div.title-name-gw,#SOHUCS #SOHU_MAIN .module-cmt-list .cmt-list-type .cmt-list-number .comment-number span.cy-number,#SOHUCS #SOHU_MAIN .module-cmt-list .cmt-list-type .cmt-list-number span.comment-number,#SOHUCS #SOHU_MAIN .module-cmt-list .cmt-list-type .type-lists li.active,#SOHUCS #SOHU_MAIN .module-cmt-list .msg-wrap-gw .wrap-action-gw .action-click-gw span a:hover,#SOHUCS #SOHU_MAIN .module-cmt-list .picture-box-gw div.box-action-gw a:hover,#SOHUCS #SOHU_MAIN .module-cmt-list .wrap-action-gw .action-click-gw span a:hover em.icon-name-bg,#SOHUCS #SOHU_MAIN .module-cmt-list .wrap-user-gw span.user-name-gw a{color:#40759b!important}#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .post-wrap-border-t div.post-wrap-border-t-r,#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w div.post-wrap-border-l,#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w div.post-wrap-border-r{display:none!important}#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .post-wrap-border-t div.post-wrap-border-t-l{background:#FFF!important;top:-2px!important}#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .wrap-action-w .action-function-w .uploading-wrapper-dw div.wrapper-image-dw,#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w div.post-wrap-main,#SOHUCS #SOHU_MAIN .module-cmt-float-bar .wrap-cont-w .cont-form-w div.form-text-w,#SOHUCS #SOHU_MAIN .module-cmt-header .section-cbox-w .block-head-w div.header-login,#SOHUCS #SOHU_MAIN .module-cmt-list .module-cmt-box .post-wrap-w div.post-wrap-main{border:1px solid #e6e6e6!important;border-radius:20px 20px 20px 20px;margin:0!important}#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .wrap-action-w .action-issue-w .issue-btn-w a .btn-fw{width:130px!important;height:34px!important;line-height:33px!important;font-size:17px!important;background:#5483b1!important;border-radius:20px!important;color:#FFF!important;-webkit-box-shadow:0 -1px 4px #5483b1 inset;box-shadow:0 -1px 10px #5483b1 inset}#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .wrap-action-w .action-issue-w .issue-btn-w a .btn-fw:before{content:"发表评论"}#SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .wrap-action-w .action-issue-w .issue-btn-w a:hover .btn-fw{color:#40759b!important;background:#FFF!important}#SOHUCS #SOHU_MAIN .module-cmt-list .cmt-list-type .type-lists li{background:none!important;border-bottom:1px solid #e6e6e6}#SOHUCS #SOHU_MAIN .module-cmt-list .cmt-list-type .type-lists li.active{border:1px solid #e6e6e6;border-radius:10px 10px 0 0;border-bottom:none}#SOHUCS #SOHU_MAIN .module-cmt-list .block-title-gw ul li .title-name-gw div.title-name-gw-tag{background:#5483b1!important;border-radius:3px}#SOHUCS #SOHU_MAIN .module-cmt-list .cmt-list-type div.cmt-list-border{background-color:#e6e6e6!important}#SOHUCS #SOHU_MAIN .module-cmt-notice ul.nt-list li.nt-item{border:1px solid #e6e6e6!important}#SOHUCS #SOHU_MAIN .module-cmt-notice ul.nt-list li.nt-item .nt-logo{text-align:center;line-height:40px;border-radius:50%!important;background:#e6e6e6!important}#SOHUCS #SOHU_MAIN .module-cmt-notice ul.nt-list li.nt-item .nt-logo:before{content:"畅";font-size:22px;color:#FFF}#SOHUCS #SOHU_MAIN .module-cmt-notice ul.nt-list li.nt-item a.nt-text,#SOHUCS #SOHU_MAIN .module-cmt-notice ul.nt-list li.nt-item a.nt-text i{color:#5483b1!important}#SOHUCS #SOHU_MAIN .module-cmt-header .section-title-w .title-user-w .user-wrap-w{background:#FFF!important}');};
+})();</script><script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script></body></html>

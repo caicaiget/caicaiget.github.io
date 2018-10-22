@@ -1,3 +1,3 @@
+https://caicaiget.github.io/post/2018-10-22-virtualenv虚拟环境.html
+https://caicaiget.github.io/post/2018-10-22-Django小结.html
 https://caicaiget.github.io/post/2018-10-20-知识点总结.html
-https://caicaiget.github.io/post/2018-10-20-redis小结.html
-https://caicaiget.github.io/post/2018-10-16-linux进阶.html
